@@ -8,4 +8,6 @@ O sistema que desenvolvi tem como objetivo digitar um texto e, em seguida, aplic
 - Qt Designer(PyQt5) para interface gráfica.
 - Plotly para análise com gráfico.
 - Bibliotecas necessárias: cryptography, netifaces, PyQy5, Plotly
+
+
   
