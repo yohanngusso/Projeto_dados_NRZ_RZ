@@ -9,5 +9,8 @@ O sistema que desenvolvi tem como objetivo digitar um texto e, em seguida, aplic
 - Plotly para análise com gráfico.
 - Bibliotecas necessárias: cryptography, netifaces, PyQy5, Plotly
 
+![image](https://github.com/yohanngusso/comunicacao_NRZ_RZ/assets/79810080/3356005b-1102-4efd-b05a-ecb8e0ee2c90)
+
+
 
   
