@@ -10,6 +10,10 @@ O sistema que desenvolvi tem como objetivo digitar um texto e, em seguida, aplic
 - Bibliotecas necessárias: cryptography, netifaces, PyQy5, Plotly
 
 ![image](https://github.com/yohanngusso/comunicacao_NRZ_RZ/assets/79810080/3356005b-1102-4efd-b05a-ecb8e0ee2c90)
+![image](https://github.com/yohanngusso/comunicacao_NRZ_RZ/assets/79810080/69720e24-d652-4b47-bc36-7180b54e6be3)
+![image](https://github.com/yohanngusso/comunicacao_NRZ_RZ/assets/79810080/22346c9a-58b2-4a61-9c4c-49fca1f8862c)
+
+
 
 
 
