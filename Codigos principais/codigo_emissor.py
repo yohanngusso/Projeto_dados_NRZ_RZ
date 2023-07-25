@@ -87,14 +87,13 @@ def ip_config_emissor(mensagem_codificada_nrz,mensagem_codificada_rz,host_ip,por
     # Conecta ao receptor
     s.connect((HOST, PORT))
 
-    # Envia a mensagem codificada nrz
     # encode é usado para converter uma string em uma sequencia de bytes, 
     # porém mensagem_codificada_nrz é uma lista 
 
     # Por isso vamos usar o método join() para concatenar as strings da lista em uma única string
     mensagem_codificada_nrz = [str(bit) for bit in mensagem_codificada_nrz]  # Converte os inteiros em strings
     mensagem_codificada_nrz = ''.join(mensagem_codificada_nrz)  # Converte a lista em uma string
-    s.sendall(mensagem_codificada_nrz.encode()) # convert uma string em uma sequencia de bytes
+    s.sendall(mensagem_codificada_nrz.encode()) # convert uma string em uma sequencia de bytes e envia
 
     mensagem_codificada_rz = [str(bit) for bit in mensagem_codificada_rz]  # Converte os inteiros em strings
     mensagem_codificada_rz = ''.join(mensagem_codificada_rz)  # Converte a lista em uma string
@@ -159,7 +158,7 @@ class Ui_MainWindow(object):
         self.send_button.setObjectName("send_button")
         self.send_button.clicked.connect(self.send_button_clicked)
         self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(10, 50, 141, 16))
+        self.label.setGeometry(QtCore.QRect(10, 50, 171, 16))
         self.label.setObjectName("label")
         self.ip = QtWidgets.QLineEdit(self.frame)
         self.ip.setGeometry(QtCore.QRect(10, 70, 221, 20))
@@ -168,8 +167,11 @@ class Ui_MainWindow(object):
         self.porta_line.setGeometry(QtCore.QRect(10, 120, 221, 20))
         self.porta_line.setObjectName("porta_line")
         self.porta_label = QtWidgets.QLabel(self.frame)
-        self.porta_label.setGeometry(QtCore.QRect(10, 100, 231, 16))
+        self.porta_label.setGeometry(QtCore.QRect(10, 100, 251, 16))
         self.porta_label.setObjectName("porta_label")
+        self.radioButton = QtWidgets.QRadioButton(self.frame)
+        self.radioButton.setGeometry(QtCore.QRect(250, 70, 101, 17))
+        self.radioButton.setObjectName("radioButton")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.output_window = None  # Variável de instância para a janela de saída
@@ -186,6 +188,7 @@ class Ui_MainWindow(object):
         self.send_button.setText(_translate("MainWindow", "Enviar"))
         self.label.setText(_translate("MainWindow", "Digite o IP do host receptor:"))
         self.porta_label.setText(_translate("MainWindow", "Digite a Porta desejada para comunicação:"))
+        self.radioButton.setText(_translate("MainWindow", "Criptografado"))
 
     def plot_button_clicked(self):
         message = self.message_line.text()
